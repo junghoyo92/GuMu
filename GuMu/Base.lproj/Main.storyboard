@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GuMu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,108 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6m-7b-4BU">
+                                <rect key="frame" x="130" y="285" width="170" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="74n-A9-jfj"/>
+                                    <constraint firstAttribute="width" constant="170" id="yHu-nu-iTY"/>
+                                </constraints>
+                                <state key="normal" image="green"/>
+                                <connections>
+                                    <action selector="soundButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MAg-u1-tIg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0T1-O4-fCv">
+                                <rect key="frame" x="130" y="130" width="170" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="gDI-wU-X7w"/>
+                                    <constraint firstAttribute="width" constant="170" id="j2i-sl-vgE"/>
+                                </constraints>
+                                <state key="normal" image="red"/>
+                                <connections>
+                                    <action selector="soundButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ue-jk-xqm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3v-08-xgG">
+                                <rect key="frame" x="300" y="130" width="170" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="9hc-P8-KRH"/>
+                                    <constraint firstAttribute="height" constant="170" id="Hxe-H9-Me0"/>
+                                </constraints>
+                                <state key="normal" image="yellow"/>
+                                <connections>
+                                    <action selector="soundButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fxs-qx-x7W"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxo-ML-yM7">
+                                <rect key="frame" x="20" y="20" width="560" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="eVu-Xd-UHc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbQ-H6-lSw">
+                                <rect key="frame" x="256" y="256" width="88" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="1C5-XC-qEx"/>
+                                    <constraint firstAttribute="width" constant="88" id="Qjm-PF-eHL"/>
+                                </constraints>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bOE-lK-qsm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3G-g6-R17">
+                                <rect key="frame" x="300" y="300" width="170" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="AjD-Rw-pj2"/>
+                                    <constraint firstAttribute="width" constant="170" id="VhU-zt-oTt"/>
+                                </constraints>
+                                <state key="normal" image="blue"/>
+                                <connections>
+                                    <action selector="soundButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n9p-KT-uJ6"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J3G-g6-R17" firstAttribute="top" secondItem="QbQ-H6-lSw" secondAttribute="bottom" constant="-44" id="4D5-JQ-cTK"/>
+                            <constraint firstItem="e6m-7b-4BU" firstAttribute="top" secondItem="QbQ-H6-lSw" secondAttribute="bottom" constant="-59" id="66p-Mq-Pql"/>
+                            <constraint firstItem="Wxo-ML-yM7" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="EFV-bm-nb8"/>
+                            <constraint firstItem="QbQ-H6-lSw" firstAttribute="top" secondItem="0T1-O4-fCv" secondAttribute="bottom" constant="-44" id="G58-Tx-Djy"/>
+                            <constraint firstItem="QbQ-H6-lSw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J3Q-gr-S20"/>
+                            <constraint firstItem="QbQ-H6-lSw" firstAttribute="leading" secondItem="0T1-O4-fCv" secondAttribute="trailing" constant="-44" id="Loq-MK-TAz"/>
+                            <constraint firstItem="J3G-g6-R17" firstAttribute="leading" secondItem="QbQ-H6-lSw" secondAttribute="trailing" constant="-44" id="SPW-qW-W2Q"/>
+                            <constraint firstItem="Wxo-ML-yM7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fqa-i6-UBC"/>
+                            <constraint firstItem="Wxo-ML-yM7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="g2m-tS-q8u"/>
+                            <constraint firstItem="QbQ-H6-lSw" firstAttribute="leading" secondItem="e6m-7b-4BU" secondAttribute="trailing" constant="-44" id="gep-Ew-GRi"/>
+                            <constraint firstItem="QbQ-H6-lSw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iG8-DD-QAt"/>
+                            <constraint firstItem="QbQ-H6-lSw" firstAttribute="top" secondItem="u3v-08-xgG" secondAttribute="bottom" constant="-44" id="neW-27-2Jh"/>
+                            <constraint firstItem="u3v-08-xgG" firstAttribute="leading" secondItem="QbQ-H6-lSw" secondAttribute="trailing" constant="-44" id="pxM-pU-H1K"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="levelLabel" destination="Wxo-ML-yM7" id="c7r-FF-7p7"/>
+                        <outlet property="startGameButton" destination="QbQ-H6-lSw" id="Riw-1k-MHt"/>
+                        <outletCollection property="soundButton" destination="u3v-08-xgG" collectionClass="NSMutableArray" id="GIp-AQ-BL9"/>
+                        <outletCollection property="soundButton" destination="0T1-O4-fCv" collectionClass="NSMutableArray" id="vxw-kK-of8"/>
+                        <outletCollection property="soundButton" destination="e6m-7b-4BU" collectionClass="NSMutableArray" id="A8Z-qn-RcN"/>
+                        <outletCollection property="soundButton" destination="J3G-g6-R17" collectionClass="NSMutableArray" id="jsd-nN-vb1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="629" y="513"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="blue" width="166" height="166"/>
+        <image name="green" width="165" height="166"/>
+        <image name="play" width="88" height="88"/>
+        <image name="red" width="165" height="165"/>
+        <image name="yellow" width="166" height="165"/>
+    </resources>
 </document>
